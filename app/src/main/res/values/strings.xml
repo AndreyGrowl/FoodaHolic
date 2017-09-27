@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FoodaHolic</string>
+    <string name="app_error">An error occured</string>
+    <string name="error_network">Please check your network connection and try again</string>
+    <string name="offline_toast">Offline mode</string>
+    <string name="error_details">Error loading details. Please, try again later</string>
+    <string name="nothing_to_show">Nothing to show :(</string>
+</resources>

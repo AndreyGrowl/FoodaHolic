@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing"
+    android:layout_marginRight="@dimen/spacing"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:stateListAnimator="@anim/item_click_animation"
+    card_view:cardCornerRadius="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_product"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/TextViewDarkGray"
+            android:layout_centerHorizontal="true"
+            tools:text="Apple" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            style="@style/TextViewDarkGray"
+            android:layout_below="@id/tv_name"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            tools:text="120$" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

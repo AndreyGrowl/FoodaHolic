@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/TextViewDarkGray"
+            tools:text="Apple" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            style="@style/TextViewDarkGray"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/image_product"
+            android:textStyle="bold"
+            tools:text="120$" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            style="@style/TextViewDarkGray"
+            android:layout_below="@id/tv_name"
+            tools:text="Lorem ipsum" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_below="@id/tv_name" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
