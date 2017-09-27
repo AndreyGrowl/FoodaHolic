@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -77,6 +78,15 @@ public class ProductDetailsActivity extends BaseActivity {
         hideProgress();
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     @Subscribe
     public void onEventProductDetails(ProductDetailResponse response) {
         product.setDescription(response.getProduct().getDescription());
@@ -118,6 +128,8 @@ public class ProductDetailsActivity extends BaseActivity {
             Intent intent = new Intent();
             intent.putExtra(Constants.EXTRA_ITEM, product);
             setResult(RESULT_OK, intent);
+
+            //TODO handle activity result
         }
         super.onBackPressed();
     }
