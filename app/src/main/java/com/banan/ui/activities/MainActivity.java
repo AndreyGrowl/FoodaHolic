@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.banan.R;
 import com.banan.api.ProductsApi;
 import com.banan.model.entities.Product;
+import com.banan.model.responses.ErrorResponse;
 import com.banan.model.responses.ProductsResponse;
 import com.banan.ui.adapters.ProductsAdapter;
 import com.banan.util.Constants;
@@ -97,6 +98,13 @@ public class MainActivity extends BaseActivity implements ProductsAdapter.OnProd
         hideProgress();
         adapter.addData(productsResponse.getProducts());
         productBox.put(productsResponse.getProducts());
+    }
+
+    @Subscribe
+    public void onEventError(ErrorResponse errorResponse) {
+        showAlert(getString(R.string.app_error), getString(R.string.error_details));
+        hideProgress();
+        showNothingToShowView();
     }
 
     @Override
